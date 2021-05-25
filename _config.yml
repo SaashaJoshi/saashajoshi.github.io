@@ -8,11 +8,11 @@ permalink:           /:title
 relative_permalinks: true
 
 # Setup
-timezone:            Asia/Kolkata # eg. Asia/Kathmandu
-locale:              en_us # eg. en_us
-name:				         Saasha Joshi
+timezone:            your timezone # eg. Asia/Kathmandu
+locale:              your locale language # eg. en_us
+name:				         site name
 title:               site title
-tagline:             'Computer Science Engineer'
+tagline:             'tagline'
 description:         'description'
 url:                 site url
 rss:                 rss feed url
@@ -25,12 +25,12 @@ icon:                your site icon path # /assets/img/icon.png [best 300px X 30
 disqus:              disqus_shortname # get it on https://disqus.com/admin/
 
 author:
-  name:           	 Saasha Joshi
-  url:            	 saashajoshi.github.io
+  name:           	 your name
+  url:            	 your site url
   facebook:          username
-  twitter:           https://twitter.com/sassy_joshy
+  twitter:           username
   google_plus:       username
-  linkedin:          https://www.linkedin.com/in/saashajoshi/
+  linkedin:          username
   dribbble:          username
   pinterest:         username
   kiva:              username
