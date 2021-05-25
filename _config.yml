@@ -1,0 +1,52 @@
+
+# Syntax highlighting
+markdown:            redcarpet
+highlighter:         pygments
+
+# Permalinks
+permalink:           /:title
+relative_permalinks: true
+
+# Setup
+timezone:            Asia/Kolkata # eg. Asia/Kathmandu
+locale:              en_us # eg. en_us
+name:				         Saasha Joshi
+title:               site title
+tagline:             'Computer Science Engineer'
+description:         'description'
+url:                 site url
+rss:                 rss feed url
+baseurl:             '/'
+baseurl_posts_img:   '/assets/images/posts/'
+baseurl_featured_img: '/assets/images/hero/'
+baseurl_featured_thumbnail: '/assets/images/thumbnail/'
+baseurl_javascripts: '/assets/javascripts/'
+icon:                your site icon path # /assets/img/icon.png [best 300px X 300px]
+disqus:              disqus_shortname # get it on https://disqus.com/admin/
+
+author:
+  name:           	 Saasha Joshi
+  url:            	 saashajoshi.github.io
+  facebook:          username
+  twitter:           https://twitter.com/sassy_joshy
+  google_plus:       username
+  linkedin:          https://www.linkedin.com/in/saashajoshi/
+  dribbble:          username
+  pinterest:         username
+  kiva:              username
+
+fb_admins:           your facebook profile id
+fb_appid:            your facebook app id
+
+# Server
+destination:      	 ./_site
+exclude:          	 [".editorconfig", ".gitignore", "bower.json", "composer.json", "CONTRIBUTING.md", "CNAME", "LICENSE", "Gruntfile.js", "package.json", "node_modules", "README.md", "sass", "haml"]
+port:             	 9001
+
+defaults:
+  -
+    scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: "default"
