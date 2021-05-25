@@ -12,7 +12,7 @@ permalink:           /:title
 timezone:            Asia/Kolkata # eg. Asia/Kathmandu
 locale:              en_us # eg. en_us
 name:				         Saasha Joshi
-title:               site title
+title:               Saasha Joshi
 tagline:             'Computer Science Engineer'
 description:         'description'
 url:                 saashajoshi.github.io
@@ -37,8 +37,8 @@ author:
   # pinterest:         username
   # kiva:              username
 
-fb_admins:           your facebook profile id
-fb_appid:            your facebook app id
+# fb_admins:           your facebook profile id
+# fb_appid:            your facebook app id
 
 # Server
 destination:      	 ./_site
