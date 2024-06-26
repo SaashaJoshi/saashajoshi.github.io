@@ -150,6 +150,8 @@ params:
           url: https://www.linkedin.com/in/saashajoshi/
         - icon: fab fa-medium
           url: https://medium.com/@saashajoshi
+        - icon: fas fa-graduation-cap
+          url: https://scholar.google.ca/citations?user=DXyC8HQAAAAJ&hl=en&oi=ao
       # customIcons:
       #   - icon: /fav.png
       #     url: "https://example.com"
