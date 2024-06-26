@@ -137,8 +137,8 @@ params:
     button:
       enable: true
       name: "Resume"
-      url: "./static/files/Saasha_Joshi_Resume_April_2024.pdf"
-      download: true
+      url: "#"
+      download: false
       newPage: true
     socialLinks:
       fontAwesomeIcons:
@@ -184,10 +184,8 @@ params:
         company: "CMC Microsystems"
         companyUrl: "https://cmc.ca/"
         date: "Jan 2024 - Present"
-        info:
-          enable: false
         featuredLink:
-          enable: false
+          enable: true
           name: "View the project"
           url: "https://example.com"
         content: "I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city."
@@ -199,7 +197,7 @@ params:
         info:
           enable: false
         featuredLink:
-          enable: false
+          enable: true
           url: "https://example.com"
         content: |
           I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
@@ -212,94 +210,48 @@ params:
         companyUrl: "https://www.ibm.com/quantum"
         date: "May 2023 - August 2023"
         featuredLink:
-          enable: false
+          enable: true
           url: "https://example.com"
         info:
-          enable: false
-          # content: I worked as a software developer for more than one year in Amazon.
+          enable: true
+          content: I worked as a software developer for more than one year in Amazon.
         content: |
-            Built a wire-cutting feature, an error-mitigation pipeline, and managed documentation for the Circuit-Knitting team.
+          I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
+
+          - Lead backend developer for a product.
+          - Created a frontend design for a product.
 
       - job: "Quantum Research Intern"
-        info:
-          enable: false
         company: "IBM Quantum"
         companyUrl: "https://www.ibm.com/quantum"
         date: "May 2022 - August 2022"
         featuredLink:
-          enable: false
+          enable: true
           url: "https://example.com"
         info:
-          enable: false
-          # content: I worked as a software developer for more than one year in Amazon.
+          enable: true
+          content: I worked as a software developer for more than one year in Amazon.
         content: |
-            Built software features, benchmarking programs, and maintained open-source software for quantum chemistry applications with the Qiskit Nature team.
+          I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
+
+          - Lead backend developer for a product.
+          - Created a frontend design for a product.
 
       - job: "Quantum Computing Intern (Maker's Lab)"
         company: "Tech Mahindra"
         companyUrl: "https://www.techmahindra.com/makers-lab/"
         date: "January 2021 - June 2021"
         featuredLink:
-          enable: false
+          enable: true
           url: "https://example.com"
         info:
-          enable: false
-          # content: I worked as a software developer for more than one year in Amazon.
+          enable: true
+          content: I worked as a software developer for more than one year in Amazon.
         content: |
-          Researched and implemented variational quantum algorithms for industrial applications.
+          I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
 
-      # - job: "Deep Learning Research Intern"
-      #   company: "Design and Innovation Center (DIC)"
-      #   companyUrl: "https://dicpu.in/"
-      #   date: "February 2020 - December 2020"
-      #   featuredLink:
-      #     enable: false
-      #     url: "https://example.com"
-      #   info:
-      #     enable: false
-      #     # content: I worked as a software developer for more than one year in Amazon.
-      #   content: |
-      #     Developed a deep neural network based Computer-Aided Diagnostic (CADx) system for diagnosing tumors.
-
-      # - job: "Summer and Winter Intern"
-      #   company: "Defence Research and Development Organisation (DRDO)"
-      #   companyUrl: "https://drdo.gov.in/drdo/"
-      #   date: "January 2019 and June 2019 - August 2019"
-      #   featuredLink:
-      #     enable: false
-      #     url: "https://example.com"
-      #   info:
-      #     enable: false
-      #     # content: I worked as a software developer for more than one year in Amazon.
-      #   content: |
-      #     Researched and implemented ML algorithms for signal processing.
-
-      # - job: "Project Intern"
-      #   company: "Panjab University"
-      #   companyUrl: "https://puchd.ac.in/"
-      #   date: "June 2018 - July 2018"
-      #   featuredLink:
-      #     enable: false
-      #     url: "https://example.com"
-      #   info:
-      #     enable: false
-      #     # content: I worked as a software developer for more than one year in Amazon.
-      #   content: |
-      #     Researched and implemented variational quantum algorithms for industrial applications.
-
-
-      # - job: "Quantum Computing Intern (Maker's Lab)"
-      #   company: "Tech Mahindra"
-      #   companyUrl: "https://www.techmahindra.com/makers-lab/"
-      #   date: "January 2021 - June 2021"
-      #   featuredLink:
-      #     enable: false
-      #     url: "https://example.com"
-      #   info:
-      #     enable: false
-      #     # content: I worked as a software developer for more than one year in Amazon.
-      #   content: |
-      #     Researched and implemented variational quantum algorithms for industrial applications.
+          - Lead backend developer for a product.
+          - Created a frontend design for a product.
 
       # - job: "UI/UX Designer"
       #   company: "Netflix"
@@ -333,26 +285,27 @@ params:
         date: "2021- 2024"
         # GPA: "3.8 out of 5.0"
         content: |-
-            Advisors: Drs. Ulrike Stege and Hausi A. Muller
-  
+          Extracurricular Activities
+            - Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
       - title: "Bachelor of Engineering in Computer Science and Engineering"
         school:
           name: "Panjab University, Chandigarh, India"
           url: "https://puchd.ac.in/"
         date: "2017 - 2021"
         # GPA: "3.9 out of 5.0"
-        # content: |-
-        #   I Publiced two papers in the ACM SIGCHI Conference on Artificial Intelligence.
-        #   - [Fast and Accurate Object Detection with a Single Convolutional Neural Network](https://example.com)
-        #   - Face mask detection using a single convolutional neural network.
+        content: |-
+          I Publiced two papers in the ACM SIGCHI Conference on Artificial Intelligence.
+          - [Fast and Accurate Object Detection with a Single Convolutional Neural Network](https://example.com)
+          - Face mask detection using a single convolutional neural network.
 
-        #   Extracurricular Activities
-        #     - Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        #     - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
-        # featuredLink:
-        #   enable: true
-        #   name: "My academic record"
-        #   url: "https://example.com"
+          Extracurricular Activities
+            - Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
+        featuredLink:
+          enable: true
+          name: "My academic record"
+          url: "https://example.com"
       # - title: "High School"
       #   school:
       #     name: "Thomas Jefferson High School for Science and Technology."
@@ -370,11 +323,11 @@ params:
       - title: NSERC CREATE Quantum BC Scholar
         content: Received scholarship for conducting research in quantum computing in BC, Canada.
         url: https://api.ca.badgr.io/public/assertions/KLh0CJ8RRHCVQWmpTHMpgg?identity__email=saashajoshi08%40gmail.com
-        image: /images/nserc-grad.png
+        image: /images/achievment.jpg
       - title: Qiskit Advocate
         content: Active contributor at various academic, outreach, and volunteering programs, with help from IBM Quantum community.
         url: https://www.credly.com/badges/9dfa697c-f9b4-49b7-ae8e-6540e5346875/public_url
-        image: /images/qiskit-adv.png
+        image: /images/achievment.jpg
       # - title: Hugo Profile
       #   content: Developed a theme and getting 1K+ downloads per month.
       #   url: "https://github.com/gurusabarish/hugo-profile"
@@ -386,28 +339,26 @@ params:
       #   url: https://example.com
 
   # Certifications
-  certifications:
-    enable: true
-    title: "Certifications"
-    items:
-      - title:
-        # content: Received scholarship for conducting research in quantum computing in BC, Canada.
-        url: https://api.ca.badgr.io/public/assertions/8MJ64D8lTpOLft6Hx7BcAQ
-        image: /images/qml-2.png
-      - title: 
-        # content: Active contributor at various academic, outreach, and volunteering programs, with help from IBM Quantum community.
-        image: /images/photonics.png
-        url: https://api.ca.badgr.io/public/assertions/Q7Px22d7TMacnAJ2ksEh1A
-      - title: 
-        # content: Developed a theme and getting 1K+ downloads per month.
-        url: "https://api.ca.badgr.io/public/assertions/TXaUhyCZQ8ijR4N4bV_4JA"
-        image: /images/qml-1.png
+  # certifications:
+  #   enable: true
+  #   title: "Certifications"
+  #   items:
+  #     - title: HI
+  #       content: Received scholarship for conducting research in quantum computing in BC, Canada.
+  #       url: https://api.ca.badgr.io/public/assertions/KLh0CJ8RRHCVQWmpTHMpgg?identity__email=saashajoshi08%40gmail.com
+  #       image: /images/achievment.jpg
+  #     - title: Qiskit Advocate
+  #       content: Active contributor at various academic, outreach, and volunteering programs, with help from IBM Quantum community.
+  #       image: /images/achievment.jpg
+      # - title: Hugo Profile
+      #   content: Developed a theme and getting 1K+ downloads per month.
+      #   url: "https://github.com/gurusabarish/hugo-profile"
+      #   image: /images/achievment.jpg
       # - title: Microsoft Imagine Runner
       #   content: We are developed a product which can help others.
-      - title: 
-        # content: Contributed to a open source project.
-        url: https://www.credly.com/badges/556c4b5e-18fe-4b64-91d2-68f2765884ca/public_url
-        image: /images/ibm-dev.png
+      # - title: Google Summer of Code
+      #   content: Contributed to a open source project.
+      #   url: https://example.com
 
   # projects
   projects:
@@ -416,7 +367,7 @@ params:
     items:
       - title: piQture-A Quantum Machine Learning Library for Image Processing
         content: An open-source Python and Qiskit-based software toolkit that simplifies the development, execution, and training of QML models tailored for image processing tasks.
-        image: /images/1.png
+        image: /images/projects/profile.png
         featured:
           name: Demos and Tutorials
           link: https://github.com/SaashaJoshi/piQture-demos
