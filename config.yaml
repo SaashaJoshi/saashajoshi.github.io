@@ -164,7 +164,7 @@ params:
     content: |-
       I am a Quantum Computing researcher and Computer Science engineer. My focus centers on exploring quantum machine learning algorithms for image processing.
 
-      I am actively engaged in education and outreach activities. I believe in contributing meaningfully to the quantum community as an open-source developer and a Qiskit Advocate. I am also an NSERC CREATE Quantum BC graduate.
+      I am actively engaged in education and outreach activities. I believe in contributing meaningfully to the quantum community as an open-source software developer and a Qiskit Advocate. I am also an NSERC CREATE Quantum BC graduate.
     skills:
       enable: true
       title: "Here are a few topics that I am currently researching about:"
@@ -422,6 +422,8 @@ params:
         featured:
           name: Demos and Tutorials
           link: https://github.com/SaashaJoshi/piQture-demos
+          # name: Thesis
+          # link: https://hdl.handle.net/1828/16627
         badges:
           - "Python"
           - "Qiskit"
@@ -442,7 +444,7 @@ params:
 
       - title: QML-CUT
         content: A circuit cutting workflow for quantum tensor network and QML models.
-        image: /images/projects/converter.jpg
+        image: /images/qiskit-neuralnetwork-uml.png
         featured:
           name: Demos and Tutorials
           link: https://github.com/SaashaJoshi/piQture-demos
@@ -456,7 +458,7 @@ params:
 
       - title: ER-FlowSim
         content: A comprehensive simulation of patient flow in an emergency room, incorporating a Canadian Triage and Acuity Scale (CTAS) for admission and discharge.
-        image: /images/projects/profile2.jpg
+        image: /images/er-simflow.png
         featured:
           name: Results and Analysis
           link: https://github.com/SaashaJoshi/ER-FlowSim/tree/main/analysis
@@ -470,7 +472,7 @@ params:
 
       - title: Pancreatic Cancer Diagnosis - CADx System Development
         content: A deep neural network based diagnostic system for diagnosing Pancreatic Cancer.
-        image: /images/projects/profile2.jpg
+        image: /images/Filtering-of-gaussian-noise-with-NF-of-01_W640-1.jpg
         featured:
           name: Paper
           link: https://doi-org.ezproxy.library.uvic.ca/10.1002/ima.22668
@@ -484,7 +486,7 @@ params:
 
       - title: Simulation and Control of a Quadcopter UAV
         content: A flight simulator for the control and evaluation of an Unmanned Aerial Vehicle (UAV).
-        image: /images/projects/profile2.jpg
+        image: /images/uav.png
         # featured:
         #   name: Paper
         #   link: https://doi-org.ezproxy.library.uvic.ca/10.1002/ima.22668
