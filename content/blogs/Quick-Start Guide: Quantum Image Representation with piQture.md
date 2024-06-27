@@ -12,6 +12,7 @@ tags:
 image: /images/ineqr-circ.png
 description: "An introduction to Quantum Image Representations (QIR)."
 toc: true
+permalink: /quick-start-guide-quantum-image-representation-with-piqture/
 ---
 
 Hello readers,
