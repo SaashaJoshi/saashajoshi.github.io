@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html>
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+<link rel="icon" href=/Saasha_Joshi_circle_yellow.png type="image/gif">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+</noscript>
+
+
+<link rel="stylesheet" href="/css/font.css" media="all">
+
+
+
+  
+
+
+<meta property="og:url" content="http://localhost:1313/blogs/quick-start-guide-quantum-image-representation-with-piqture/">
+  <meta property="og:site_name" content="Saasha Joshi">
+  <meta property="og:title" content="Quick-Start Guide: Quantum Image Representation with piQture">
+  <meta property="og:description" content="An introduction to Quantum Image Representations (QIR).">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blogs">
+    <meta property="article:published_time" content="2024-06-24T23:29:21-08:00">
+    <meta property="article:modified_time" content="2024-06-24T23:29:21-08:00">
+    <meta property="article:tag" content="Quantum Image Processing">
+    <meta property="article:tag" content="Quantum Machine Learning">
+    <meta property="article:tag" content="PiQture">
+    <meta property="article:tag" content="Open Source Development">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Quick-Start Guide: Quantum Image Representation with piQture">
+  <meta name="twitter:description" content="An introduction to Quantum Image Representations (QIR).">
+
+
+<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
+<link rel="stylesheet" href="/css/footer.css" media="all">
+
+
+<link rel="stylesheet" href="/css/theme.css" media="all">
+
+<style>
+    :root {
+        --text-color: #343a40;
+        --text-secondary-color: #6c757d;
+        --background-color: #eaedf0;
+        --secondary-background-color: #64ffda1a;
+        --primary-color: #007bff;
+        --secondary-color: #f8f9fa;
+
+         
+        --text-color-dark: #e4e6eb;
+        --text-secondary-color-dark: #b0b3b8;
+        --background-color-dark: #18191a;
+        --secondary-background-color-dark: #212529;
+        --primary-color-dark: #ffffff;
+        --secondary-color-dark: #212529;
+    }
+    body {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    html {
+        background-color: var(--background-color) !important;
+    }
+
+    body::-webkit-scrollbar {
+        height: 0px;
+        width: 8px;
+        background-color: var(--background-color);
+    }
+
+    ::-webkit-scrollbar-track {
+        border-radius: 1rem;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background: #b0b0b0;
+        outline: 1px solid var(--background-color);
+    }
+
+    #search-content::-webkit-scrollbar {
+        width: .5em;
+        height: .1em;
+        background-color: var(--background-color);
+    }
+</style>
+
+
+
+<meta name="description" content="An introduction to Quantum Image Representations (QIR).">
+<link rel="stylesheet" href="/css/single.css">
+
+
+<script defer src="/fontawesome-6/all-6.4.2.js"></script>
+
+
+  
+  
+
+  <title>
+Quick-Start Guide: Quantum Image Representation with piQture | Saasha Joshi
+
+  </title>
+</head>
+
+<body class="light">
+  
+  
+<script>
+    let localStorageValue = localStorage.getItem("pref-theme");
+    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    switch (localStorageValue) {
+        case "dark":
+            document.body.classList.add('dark');
+            break;
+        case "light":
+            document.body.classList.remove('dark');
+            break;
+        default:
+            if (mediaQuery) {
+                document.body.classList.add('dark');
+            }
+            break;
+    }
+</script>
+
+
+
+
+<script>
+    var prevScrollPos = window.pageYOffset;
+    window.addEventListener("scroll", function showHeaderOnScroll() {
+        let profileHeaderElem = document.getElementById("profileHeader");
+        let currentScrollPos = window.pageYOffset;
+        let resetHeaderStyle = false;
+        let showNavBarOnScrollUp =  true ;
+        let showNavBar = showNavBarOnScrollUp ? prevScrollPos > currentScrollPos : currentScrollPos > 0;
+        if (showNavBar) {
+            profileHeaderElem.classList.add("showHeaderOnTop");
+        } else {
+            resetHeaderStyle = true;
+        }
+        if(currentScrollPos === 0) {
+            resetHeaderStyle = true;
+        }
+        if(resetHeaderStyle) {
+            profileHeaderElem.classList.remove("showHeaderOnTop");
+        }
+        prevScrollPos = currentScrollPos;
+    });
+</script>
+
+
+
+<header id="profileHeader">
+    <nav class="pt-3 navbar navbar-expand-lg animate">
+        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+            
+            <a class="navbar-brand primary-font text-wrap" href="/public">
+                
+                <img src="/Saasha_Joshi_circle_yellow.png" width="30" height="30"
+                     class="d-inline-block align-top">
+                Saasha Joshi
+                
+            </a>
+
+            
+                <div>
+                    <input id="search" autocomplete="off" class="form-control mr-sm-2 d-none d-md-block" placeholder='Ctrl &#43; k to Search...'
+                        aria-label="Search" oninput="searchOnChange(event)">
+                </div>
+            
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                </svg>
+            </button>
+
+            
+            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                <ul class="navbar-nav ms-auto text-center">
+                    
+                        <li class="nav-item navbar-text d-block d-md-none">
+                            <div class="nav-link">
+                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder='Ctrl &#43; k to Search...' aria-label="Search" oninput="searchOnChange(event)">
+                            </div>
+                        </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/public#about" aria-label="about">
+                            About Me
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/public#experience"
+                            aria-label="experience">
+                            Experience
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/public#education"
+                            aria-label="education">
+                            Education
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/public#projects"
+                            aria-label="projects">
+                            Projects
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/public#achievements"
+                            aria-label="achievements">
+                            Achievements
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/public#contact"
+                            aria-label="contact">
+                            Contact
+                        </a>
+                    </li>
+                    
+
+                    
+
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/blogs" title="Blog posts">
+                            
+                            Blog
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/gallery" title="Blog posts">
+                            
+                            Gallery
+                        </a>
+                    </li>
+                    
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        
+                        <div class="text-center">
+                            <button id="theme-toggle">
+                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<div id="content">
+<section id="single">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-12 col-lg-9">
+        <div class="pr-lg-4">
+          <div class="title mb-5">
+            <h1 class="text-center mb-4">Quick-Start Guide: Quantum Image Representation with piQture</h1>
+            <div class="text-center">
+              
+                Saasha Joshi
+                <small>|</small>
+              
+              Jun 24, 2024
+
+              
+              <span id="readingTime">
+                min read
+              </span>
+              
+            </div>
+          </div>
+          
+          <div class="featured-image">
+            <img class="img-fluid mx-auto d-block" src="/images/ineqr-circ.png" alt="Quick-Start Guide: Quantum Image Representation with piQture">
+          </div>
+          
+          <article class="page-content  p-2">
+          <p>Hello readers,</p>
+<p>A couple of weeks ago I defended my Master&rsquo;s thesis titled <strong>piQture: A Quantum Machine Learning (QML) Library for Image Processing</strong><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>. Encouraged by the response and interest in <em>piQture</em>, I am here with a series of quick-start guides to the library.</p>
+<h2 id="introducing-piqture">Introducing <em>piQture</em></h2>
+<p><em>piQture</em> is a Python and Qiskit-based software framework designed to accommodate users familiar with classical machine learning but without prior experience in QML. It provides users with an accessible workflow to design, implement, and experiment with QML models for real-life applications such as image processing.</p>
+<h2 id="quantum-image-representation-qir">Quantum Image Representation (QIR)</h2>
+<p>Today, I wish to dive into one of <em>piQture</em>&rsquo;s standout features implementing Quantum Image Representation (QIR) methods.</p>
+<p>QIR is a data embedding technique that provides an interface between classical and quantum platforms for representing digital images on quantum devices. Digital images typically have attributes such as pixel position and color information that can be encoded onto a quantum circuit using specific unitary transforms.</p>
+<center>
+<figure>
+    <img src="/images/2x2%20image.png">
+    <figcaption>A 2x2 image with pixel positions (00, 01, 10, 11) and their corresponding color information (5, 50, 150, 255)</figcaption>
+</figure>
+</center>
+<h3 id="understanding-ineqr">Understanding INEQR</h3>
+<p>While many QIR techniques exist, this article focuses on the <strong>Improved Novel Enhanced Quantum Representation (INEQR)</strong> method for image representation.</p>
+<p>INEQR, introduced by Nan Jiang and Luo Wang<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>, supports encoding non-square images with unequal horizontal (X) and vertical (Y) dimensions onto a quantum circuit.</p>
+<p>INEQR employs unitary operations like Hadamard (H) and Controlled-NOT (CX) to capture the pixel position and color information, respectively. It utilizes the basis states of the qubits to represent this information, resulting in a deterministic image retrieval process. A significant limitation of INEQR is its inability to encode colored images.</p>
+<h3 id="a-little-math-perhaps-else-skip-to-the-implementation-optional">A Little Math, Perhaps? Else, Skip to the Implementation! (Optional)</h3>
+<p>INEQR employs two unitary transforms:</p>
+<ol>
+<li><em>Hadamard</em> transform for encoding the pixel position.</li>
+<li><em>Multi-CX</em> transform for encoding the color information.</li>
+</ol>
+<p>For simplicity, let us consider a grayscale image of size 2x2, with gray values in the range [0, 255].</p>
+<p><strong>Step 1:</strong><br>
+The pixel positions of the four pixels in a 2x2 image can be represented in their binary formats as 00, 01, 10, and 11, which correspond to the coordinates of each pixel in the image grid:</p>
+<ul>
+<li>Top-left pixel corresponds to (Y = 0, X = 0)</li>
+<li>Top-right pixel corresponds to (Y = 0, X = 1)</li>
+<li>Bottom-left pixel corresponds to (Y = 1, X = 0)</li>
+<li>Bottom-left pixel corresponds to (Y = 1, X = 1)</li>
+</ul>
+<p>INEQR utilizes a <em>Hadamard</em> transform that encodes these pixel positions on √4 = 2 qubits (q₀ and q₁).</p>
+<center>
+<figure>
+    <img src="/images/hadamard-trans.png">
+    <figcaption>Step 1: A Hadamard transform that uses 2 qubits to encode four pixel positions.</figcaption>
+</figure>
+</center>
+<center>
+<figure>
+    <img src="/images/hadamard-circ.png">
+    <figcaption>Hadamard transform encodes pixel position on two qubits.</figcaption>
+</figure>
+</center>
+<p>During practical implementation, Hadamard gates are followed by X gates, preparing an oracle-like structure for the multi-CX gates to encode color information corresponding to each pixel position.</p>
+<p><strong>Step 2:</strong><br>
+The first action in this step is to convert the gray values in the range [0, 255] to their corresponding binary formats. For example, 50 in binary can be given as 00110010, and 255 as 11111111.</p>
+<p>Now, a <em>Multi-CX</em> transform encodes the binary color information onto an additional 8 qubits (q₂ to q₉). For a 2x2 image, a CCX unitary gate, with controls on the first two positional qubits (q₀ and q₁), is applied to qubit qᵢ when the i-th color bit is 1.</p>
+<center>
+<figure>
+    <img src="/images/cx-trans.png">
+    <figcaption>Step 2: A CX transform that utilizes 8 qubits to encode a color value in the range [0, 255]. The color value is represented in its binary format (shown in figure, binary of color value 50).</figcaption>
+</figure>
+</center>
+<center>
+<figure>
+    <img src="/images/cx-circ.png">
+    <figcaption>CCX operations encode the color information. This image shows the encoding of the color value 49.</figcaption>
+</figure>
+</center>
+<p>Combining the transforms in Step 1 and Step 2, an INEQR encoded 2x2 image can be given as:</p>
+<center>
+<figure>
+    <img src="/images/final-ineqr.png">
+    <figcaption>An INEQR representation for a 2x2 image</figcaption>
+</figure>
+</center>
+<p>The total qubit requirement for INEQR is <strong>n₁ + n₂ + q</strong>. Remember, a generalized INEQR method can encode non-square images.</p>
+<center>
+<figure>
+    <img src="/images/general-ineqr.png">
+    <figcaption>An INEQR representation for any non-square image</figcaption>
+</figure>
+</center>
+<h2 id="implementation-with-piqture">Implementation with <em>piQture</em></h2>
+<p><em>piQture</em> has an in-built implementation for <code>INEQR</code> in the <code>image_representations</code> module. Let us see how <em>piQture</em> can be utilized to build an INEQR embedding circuit.</p>
+<p>Note: This implementation utilizes the <code>load_mnist_dataset</code> function from the <code>data_loader</code> module in <em>piQture</em> to import an MNIST dataset from PyTorch databases.</p>
+<p>Alright, let us start by performing some imports.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> torch
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> piqture.data_loader.mnist_data_loader <span style="color:#f92672">import</span> load_mnist_dataset
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> piqture.embeddings.image_embeddings.ineqr <span style="color:#f92672">import</span> INEQR
+</span></span></code></pre></div><p>Next, load the MNIST dataset using the <code>load_mnist_dataset</code> function.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Resize images to 2x2</span>
+</span></span><span style="display:flex;"><span>img_size <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>train_dataset, test_dataset <span style="color:#f92672">=</span> load_mnist_dataset(img_size)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Retrieve a single image from the dataset</span>
+</span></span><span style="display:flex;"><span>image, label <span style="color:#f92672">=</span> train_dataset[<span style="color:#ae81ff">1</span>]
+</span></span><span style="display:flex;"><span>image_size <span style="color:#f92672">=</span> tuple(image<span style="color:#f92672">.</span>squeeze()<span style="color:#f92672">.</span>size())
+</span></span></code></pre></div><p>By default, the MNIST images are of the type <code>tensor</code> with <code>float</code> values. We transform these color values into <code>integers</code> and further to their <code>binary</code> representations.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Change pixel values from tensor to list</span>
+</span></span><span style="display:flex;"><span>pixel_vals <span style="color:#f92672">=</span> (image <span style="color:#f92672">*</span> <span style="color:#ae81ff">255</span>)<span style="color:#f92672">.</span>round()<span style="color:#f92672">.</span>to(torch<span style="color:#f92672">.</span>uint8)
+</span></span><span style="display:flex;"><span>pixel_vals <span style="color:#f92672">=</span> pixel_vals<span style="color:#f92672">.</span>tolist()
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;Label: &#34;</span>, label, <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">Pixel values: &#34;</span>, pixel_vals)
+</span></span></code></pre></div><p>Finally, let us generate the INEQR circuit with <em>piQture</em>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>embedding <span style="color:#f92672">=</span> INEQR(image_size, pixel_vals)<span style="color:#f92672">.</span>ineqr()
+</span></span><span style="display:flex;"><span>embedding<span style="color:#f92672">.</span>draw(<span style="color:#e6db74">&#34;mpl&#34;</span>, style<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;iqp&#34;</span>)
+</span></span></code></pre></div><center>
+<figure>
+    <img src="/images/ineqr-circ.png">
+    <figcaption>An INEQR circuit for a 2x2 grayscale MNIST image with color information [[38, 49], [46, 41]]</figcaption>
+</figure>
+</center>
+<p>That is all for today. Stay tuned to the <a href="https://github.com/SaashaJoshi/piQture">piQture</a> repository for more intriguing implementations and the <a href="https://github.com/SaashaJoshi/piQture-demos">piQture-demos</a> repository for upcoming demos and tutorials on QIR.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>S. Joshi, “piQture: A Quantum Machine Learning Library for Image Processing,” dspace.library.uvic.ca, 2024, Accessed: Jun. 24, 2024. [Online]. Available: <a href="https://dspace.library.uvic.ca/items/a21a2dca-f0c3-465d-b1c7-40b122b67697">https://dspace.library.uvic.ca/items/a21a2dca-f0c3-465d-b1c7-40b122b67697</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>Nan Jiang and Luo Wang. Quantum image scaling using nearest neighbor interpolation. Quantum Information Processing, 14(5):1559–1571, 2015.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+          </article>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-3">
+        <div id="stickySideBar" class="sticky-sidebar">
+          
+          <aside class="toc">
+              <h5>
+                Table Of Contents
+              </h5>
+              <div class="toc-content">
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introducing-piqture">Introducing <em>piQture</em></a></li>
+    <li><a href="#quantum-image-representation-qir">Quantum Image Representation (QIR)</a>
+      <ul>
+        <li><a href="#understanding-ineqr">Understanding INEQR</a></li>
+        <li><a href="#a-little-math-perhaps-else-skip-to-the-implementation-optional">A Little Math, Perhaps? Else, Skip to the Implementation! (Optional)</a></li>
+      </ul>
+    </li>
+    <li><a href="#implementation-with-piqture">Implementation with <em>piQture</em></a></li>
+  </ul>
+</nav>
+              </div>
+          </aside>
+          
+
+          
+          <aside class="tags">
+            <h5>Tags</h5>
+            <ul class="tags-ul list-unstyled list-inline">
+              
+              <li class="list-inline-item"><a href="http://localhost:1313/tags/quantum-image-processing"
+                target="_blank"
+              >Quantum Image Processing</a></li>
+              
+              <li class="list-inline-item"><a href="http://localhost:1313/tags/quantum-machine-learning"
+                target="_blank"
+              >Quantum Machine Learning</a></li>
+              
+              <li class="list-inline-item"><a href="http://localhost:1313/tags/piqture"
+                target="_blank"
+              >piQture</a></li>
+              
+              <li class="list-inline-item"><a href="http://localhost:1313/tags/open-source-development"
+                target="_blank"
+              >Open source development</a></li>
+              
+            </ul>
+          </aside>
+          
+
+          
+          <aside class="social">
+            <h5>Social</h5>
+            <div class="social-content">
+              <ul class="list-inline">
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=http%3a%2f%2flocalhost%3a1313%2fblogs%2fquick-start-guide-quantum-image-representation-with-piqture%2f">
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://twitter.com/share?text=Quick-Start%20Guide%3a%20Quantum%20Image%20Representation%20with%20piQture&url=http%3a%2f%2flocalhost%3a1313%2fblogs%2fquick-start-guide-quantum-image-representation-with-piqture%2f">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text=Quick-Start%20Guide%3a%20Quantum%20Image%20Representation%20with%20piQture: http%3a%2f%2flocalhost%3a1313%2fblogs%2fquick-start-guide-quantum-image-representation-with-piqture%2f">
+                    <i class="fab fa-whatsapp"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href='mailto:?subject=Quick-Start%20Guide%3a%20Quantum%20Image%20Representation%20with%20piQture&amp;body=Check%20out%20this%20site http%3a%2f%2flocalhost%3a1313%2fblogs%2fquick-start-guide-quantum-image-representation-with-piqture%2f'>
+                    <i class="fa fa-envelope"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </aside>
+          
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-9 p-4">
+        
+      </div>
+    </div>
+  </div>
+  <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
+    <i class="fas fa-angle-up"></i>
+  </button>
+</section>
+
+
+<div class="progress">
+  <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<Script src="/js/scrollProgressBar.js"></script>
+
+
+<script>
+  var topScroll = document.getElementById("topScroll");
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      topScroll.style.display = "block";
+    } else {
+      topScroll.style.display = "none";
+    }
+  }
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+
+  
+  let stickySideBarElem = document.getElementById("stickySideBar");
+  let stickyNavBar =  true ;
+  if(stickyNavBar) {
+    let headerElem = document.getElementById("profileHeader");
+    let headerHeight = headerElem.offsetHeight + 15;
+    stickySideBarElem.style.top = headerHeight + "px";
+  } else {
+    stickySideBarElem.style.top = "50px";
+  }
+</script>
+
+
+<script src="/js/readingTime.js"></script>
+
+
+
+  </div><footer>
+    
+ 
+ 
+<div class="container py-3" id="recent-posts">
+    
+    
+    <div class="h3 text-center text-secondary py-3">
+        Recent Posts
+    </div>
+    <div class="row justify-content-center">
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/blogs/page/quick-start-guide-quantum-image-representation-with-piqtureqture">
+                        <img src="/images/ineqr-circ.png" class="card-img-top" alt="Quick-Start Guide: Quantum Image Representation with piQture">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/blogs/page/quick-start-guide-quantum-image-representation-with-piqtureqture" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Quick-Start Guide: Quantum Image Representation with piQture">Quick-Start Guide: …</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p>Hello readers,
+A couple of weeks ago I defended my Master&rsquo;s thesis titled piQture: A Quantum Machine Learning (QML) Library for Image Processing1. Encouraged by the response and interest in piQture, I am here with a series of quick-start guides to the library.
+Introducing piQture piQture is a …</p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Jun 24, 2024</span>
+                    <a href="/blogs/page/quick-start-guide-quantum-image-representation-with-piqtureqture" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<div class="text-center pt-2">
+    
+
+    
+
+    
+
+    
+
+    
+</div><div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            
+                <div class="pb-2">
+                    <a href="http://localhost:1313/" title="Saasha Joshi">
+                        <img alt="Footer logo" src="/Saasha_Joshi_circle_yellow.png"
+                            height="40px" width="40px">
+                    </a>
+                </div>
+            
+            &copy; 2024  All rights reserved
+            <div class="text-secondary">
+                Made with
+                <span class="text-danger">
+                    &#10084;
+                </span>
+                and
+                <a href="https://github.com/gurusabarish/hugo-profile" target="_blank"
+                    title="Designed and developed by gurusabarish">
+                    Hugo Profile
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+</script>
+
+
+    <script src="/js/search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+  <section id="search-content" class="py-2">
+    <div class="container" id="search-results"></div>
+  </section>
+</body>
+
+</html>
