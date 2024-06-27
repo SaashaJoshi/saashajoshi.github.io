@@ -32,7 +32,7 @@
 
 
 <meta property="og:url" content="http://localhost:1313/blogs/quick-start-guide-quantum-image-representation-with-piqture/">
-  <meta property="og:site_name" content="Hugo Profile">
+  <meta property="og:site_name" content="Saasha Joshi">
   <meta property="og:title" content="Quick-Start Guide: Quantum Image Representation with piQture">
   <meta property="og:description" content="An introduction to Quantum Image Representations (QIR).">
   <meta property="og:locale" content="en_us">
@@ -121,7 +121,7 @@
   
 
   <title>
-Quick-Start Guide: Quantum Image Representation with piQture | Hugo Profile
+Quick-Start Guide: Quantum Image Representation with piQture | Saasha Joshi
 
   </title>
 </head>
@@ -184,7 +184,7 @@ Quick-Start Guide: Quantum Image Representation with piQture | Hugo Profile
                 
                 <img src="/Saasha_Joshi_circle_yellow.png" width="30" height="30"
                     class="d-inline-block align-top">
-                Hugo Profile
+                Saasha Joshi
                 
             </a>
 
@@ -345,17 +345,21 @@ Quick-Start Guide: Quantum Image Representation with piQture | Hugo Profile
             </div>
           </div>
           
+          <div class="featured-image">
+            <img class="img-fluid mx-auto d-block" src="/images/ineqr-circ.png" alt="Quick-Start Guide: Quantum Image Representation with piQture">
+          </div>
+          
           <article class="page-content  p-2">
           <p>Hello readers,</p>
-<p>A couple of weeks ago I defended my Master&rsquo;s thesis titled <em>piQture: A Quantum Machine Learning (QML) Library for Image Processing</em><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>. Encouraged by the response and interest in <em>piQture</em>, I am here with a series of quick-start guides to the library.</p>
+<p>A couple of weeks ago I defended my Master&rsquo;s thesis titled <strong>piQture: A Quantum Machine Learning (QML) Library for Image Processing</strong><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>. Encouraged by the response and interest in <em>piQture</em>, I am here with a series of quick-start guides to the library.</p>
 <h2 id="introducing-piqture">Introducing <em>piQture</em></h2>
 <p><em>piQture</em> is a Python and Qiskit-based software framework designed to accommodate users familiar with classical machine learning but without prior experience in QML. It provides users with an accessible workflow to design, implement, and experiment with QML models for real-life applications such as image processing.</p>
 <h2 id="quantum-image-representation-qir">Quantum Image Representation (QIR)</h2>
-<p>Today, I wish to dive into one of <em>piQture</em>&rsquo;s standout features — implementing Quantum Image Representation (QIR) methods.</p>
+<p>Today, I wish to dive into one of <em>piQture</em>&rsquo;s standout features implementing Quantum Image Representation (QIR) methods.</p>
 <p>QIR is a data embedding technique that provides an interface between classical and quantum platforms for representing digital images on quantum devices. Digital images typically have attributes such as pixel position and color information that can be encoded onto a quantum circuit using specific unitary transforms.</p>
 <center>
 <figure>
-    <img src="https://github.com/SaashaJoshi/saashajoshi.github.io/tree/main/content/images/2x2 image.png">
+    <img src="/images/2x2%20image.png">
     <figcaption>A 2x2 image with pixel positions (00, 01, 10, 11) and their corresponding color information (5, 50, 150, 255)</figcaption>
 </figure>
 </center>
@@ -381,13 +385,13 @@ The pixel positions of the four pixels in a 2x2 image can be represented in thei
 <p>INEQR utilizes a <em>Hadamard</em> transform that encodes these pixel positions on √4 = 2 qubits (q₀ and q₁).</p>
 <center>
 <figure>
-    <img src="https://github.com/SaashaJoshi/saashajoshi.github.io/tree/main/content//images/hadamard-trans.png">
+    <img src="/images/hadamard-trans.png">
     <figcaption>Step 1: A Hadamard transform that uses 2 qubits to encode four pixel positions.</figcaption>
 </figure>
 </center>
 <center>
 <figure>
-    <img src="https://github.com/SaashaJoshi/saashajoshi.github.io/tree/main/content//images/hadamard-circ.png">
+    <img src="/images/hadamard-circ.png">
     <figcaption>Hadamard transform encodes pixel position on two qubits.</figcaption>
 </figure>
 </center>
@@ -397,27 +401,27 @@ The first action in this step is to convert the gray values in the range [0, 255
 <p>Now, a <em>Multi-CX</em> transform encodes the binary color information onto an additional 8 qubits (q₂ to q₉). For a 2x2 image, a CCX unitary gate, with controls on the first two positional qubits (q₀ and q₁), is applied to qubit qᵢ when the i-th color bit is 1.</p>
 <center>
 <figure>
-    <img src="https://github.com/SaashaJoshi/saashajoshi.github.io/tree/main/content//images/cx-trans.png">
+    <img src="/images/cx-trans.png">
     <figcaption>Step 2: A CX transform that utilizes 8 qubits to encode a color value in the range [0, 255]. The color value is represented in its binary format (shown in figure, binary of color value 50).</figcaption>
 </figure>
 </center>
 <center>
 <figure>
-    <img src="https://github.com/SaashaJoshi/saashajoshi.github.io/tree/main/content//images/cx-circ.png">
+    <img src="/images/cx-circ.png">
     <figcaption>CCX operations encode the color information. This image shows the encoding of the color value 49.</figcaption>
 </figure>
 </center>
 <p>Combining the transforms in Step 1 and Step 2, an INEQR encoded 2x2 image can be given as:</p>
 <center>
 <figure>
-    <img src="https://github.com/SaashaJoshi/saashajoshi.github.io/tree/main/content//images/final-ineqr.png">
+    <img src="/images/final-ineqr.png">
     <figcaption>An INEQR representation for a 2x2 image</figcaption>
 </figure>
 </center>
 <p>The total qubit requirement for INEQR is <strong>n₁ + n₂ + q</strong>. Remember, a generalized INEQR method can encode non-square images.</p>
 <center>
 <figure>
-    <img src="https://github.com/SaashaJoshi/saashajoshi.github.io/tree/main/content//images/general-ineqr.png">
+    <img src="/images/general-ineqr.png">
     <figcaption>An INEQR representation for any non-square image</figcaption>
 </figure>
 </center>
@@ -446,7 +450,7 @@ The first action in this step is to convert the gray values in the range [0, 255
 </span></span><span style="display:flex;"><span>embedding<span style="color:#f92672">.</span>draw(<span style="color:#e6db74">&#34;mpl&#34;</span>, style<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;iqp&#34;</span>)
 </span></span></code></pre></div><center>
 <figure>
-    <img src="https://github.com/SaashaJoshi/saashajoshi.github.io/tree/main/content//images/ineqr-circ.png">
+    <img src="/images/ineqr-circ.png">
     <figcaption>An INEQR circuit for a 2x2 grayscale MNIST image with color information [[38, 49], [46, 41]]</figcaption>
 </figure>
 </center>
@@ -614,6 +618,12 @@ The first action in this step is to convert the gray values in the range [0, 255
         <div class="col-lg-4 col-md-6 pt-2">
             <div class="card h-100">
                 
+                <div class="card-header">
+                    <a href="/blogs/quick-start-guide-quantum-image-representation-with-piqture/">
+                        <img src="/images/ineqr-circ.png" class="card-img-top" alt="Quick-Start Guide: Quantum Image Representation with piQture">
+                    </a>
+                </div>
+                
                 <div class="card-body bg-transparent p-3 shadow-sm">
                     <a href="/blogs/quick-start-guide-quantum-image-representation-with-piqture/" class="primary-font card-title">
                         <h5 class="card-title bg-transparent" title="Quick-Start Guide: Quantum Image Representation with piQture">Quick-Start Guide: …</h5>
@@ -627,24 +637,6 @@ Introducing piQture piQture is a …</p>
                 <div class="mt-auto card-footer">
                     <span class="float-start">Jun 24, 2024</span>
                     <a href="/blogs/quick-start-guide-quantum-image-representation-with-piqture/" class="float-end btn btn-outline-info btn-sm">Read</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-lg-4 col-md-6 pt-2">
-            <div class="card h-100">
-                
-                <div class="card-body bg-transparent p-3 shadow-sm">
-                    <a href="/blogs/sample/" class="primary-font card-title">
-                        <h5 class="card-title bg-transparent" title=""></h5>
-                    </a>
-                    <div class="card-text secondary-font">
-                        <p>Quantum Machine Learning with Circuit Cutting Quantum Machine Learning (QML) techniques, including variational Quantum Tensor Networks (QTN), pose a huge implementation challenge regarding qubit requirements. An approach to circumvent this issue is to perform circuit cutting that segments large …</p>
-                    </div>
-                </div>
-                <div class="mt-auto card-footer">
-                    <span class="float-start">Jan 1, 0001</span>
-                    <a href="/blogs/sample/" class="float-end btn btn-outline-info btn-sm">Read</a>
                 </div>
             </div>
         </div>
@@ -667,7 +659,7 @@ Introducing piQture piQture is a …</p>
         <div class="col-md-4 text-center">
             
                 <div class="pb-2">
-                    <a href="http://localhost:1313/" title="Hugo Profile">
+                    <a href="http://localhost:1313/" title="Saasha Joshi">
                         <img alt="Footer logo" src="/Saasha_Joshi_circle_yellow.png"
                             height="40px" width="40px">
                     </a>

@@ -1,22 +1,22 @@
 ---
-title: "Quick-Start Guide-Quantum Image Representation with piQture"
+title: "Quick-Start Guide: Quantum Image Representation with piQture"
 date: 2024-06-24T23:29:21-08:00
 draft: false
-github_link: 
+#github_link: 
 author: "Saasha Joshi"
 tags:
   - Quantum Image Processing
   - Quantum Machine Learning
   - piQture
   - Open source development
-image: 
+image: /images/ineqr-circ.png
 description: "An introduction to Quantum Image Representations (QIR)."
-toc:
+toc: true
 ---
 
 Hello readers,
 
-A couple of weeks ago I defended my Master's thesis titled *piQture: A Quantum Machine Learning (QML) Library for Image Processing*[^1]. Encouraged by the response and interest in *piQture*, I am here with a series of quick-start guides to the library.
+A couple of weeks ago I defended my Master's thesis titled **piQture: A Quantum Machine Learning (QML) Library for Image Processing**[^1]. Encouraged by the response and interest in *piQture*, I am here with a series of quick-start guides to the library.
 
 ## Introducing *piQture*
 
@@ -24,13 +24,13 @@ A couple of weeks ago I defended my Master's thesis titled *piQture: A Quantum M
 
 ## Quantum Image Representation (QIR)
 
-Today, I wish to dive into one of *piQture*'s standout features — implementing Quantum Image Representation (QIR) methods.
+Today, I wish to dive into one of *piQture*'s standout features implementing Quantum Image Representation (QIR) methods.
 
 QIR is a data embedding technique that provides an interface between classical and quantum platforms for representing digital images on quantum devices. Digital images typically have attributes such as pixel position and color information that can be encoded onto a quantum circuit using specific unitary transforms.
 
 <center>
 <figure>
-    <img src="https://github.com/SaashaJoshi/saashajoshi.github.io/tree/main/content/images/2x2 image.png">
+    <img src="/images/2x2%20image.png">
     <figcaption>A 2x2 image with pixel positions (00, 01, 10, 11) and their corresponding color information (5, 50, 150, 255)</figcaption>
 </figure>
 </center>
@@ -63,14 +63,14 @@ INEQR utilizes a *Hadamard* transform that encodes these pixel positions on √4
 
 <center>
 <figure>
-    <img src="https://github.com/SaashaJoshi/saashajoshi.github.io/tree/main/content//images/hadamard-trans.png">
+    <img src="/images/hadamard-trans.png">
     <figcaption>Step 1: A Hadamard transform that uses 2 qubits to encode four pixel positions.</figcaption>
 </figure>
 </center>
 
 <center>
 <figure>
-    <img src="https://github.com/SaashaJoshi/saashajoshi.github.io/tree/main/content//images/hadamard-circ.png">
+    <img src="/images/hadamard-circ.png">
     <figcaption>Hadamard transform encodes pixel position on two qubits.</figcaption>
 </figure>
 </center>
@@ -84,14 +84,14 @@ Now, a *Multi-CX* transform encodes the binary color information onto an additio
 
 <center>
 <figure>
-    <img src="https://github.com/SaashaJoshi/saashajoshi.github.io/tree/main/content//images/cx-trans.png">
+    <img src="/images/cx-trans.png">
     <figcaption>Step 2: A CX transform that utilizes 8 qubits to encode a color value in the range [0, 255]. The color value is represented in its binary format (shown in figure, binary of color value 50).</figcaption>
 </figure>
 </center>
 
 <center>
 <figure>
-    <img src="https://github.com/SaashaJoshi/saashajoshi.github.io/tree/main/content//images/cx-circ.png">
+    <img src="/images/cx-circ.png">
     <figcaption>CCX operations encode the color information. This image shows the encoding of the color value 49.</figcaption>
 </figure>
 </center>
@@ -100,7 +100,7 @@ Combining the transforms in Step 1 and Step 2, an INEQR encoded 2x2 image can be
 
 <center>
 <figure>
-    <img src="https://github.com/SaashaJoshi/saashajoshi.github.io/tree/main/content//images/final-ineqr.png">
+    <img src="/images/final-ineqr.png">
     <figcaption>An INEQR representation for a 2x2 image</figcaption>
 </figure>
 </center>
@@ -109,7 +109,7 @@ The total qubit requirement for INEQR is **n₁ + n₂ + q**. Remember, a genera
 
 <center>
 <figure>
-    <img src="https://github.com/SaashaJoshi/saashajoshi.github.io/tree/main/content//images/general-ineqr.png">
+    <img src="/images/general-ineqr.png">
     <figcaption>An INEQR representation for any non-square image</figcaption>
 </figure>
 </center>
@@ -158,7 +158,7 @@ embedding.draw("mpl", style="iqp")
 
 <center>
 <figure>
-    <img src="https://github.com/SaashaJoshi/saashajoshi.github.io/tree/main/content//images/ineqr-circ.png">
+    <img src="/images/ineqr-circ.png">
     <figcaption>An INEQR circuit for a 2x2 grayscale MNIST image with color information [[38, 49], [46, 41]]</figcaption>
 </figure>
 </center>
