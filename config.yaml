@@ -56,7 +56,7 @@ params:
   title: "Hugo Profile"
   description: Text about my cool site
   # staticPath: ""  # The path to serve the static files from
-  favicon: "/fav.png"
+  favicon: "/Saasha_Joshi_circle_yellow.png"
 
   # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
   # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
@@ -129,15 +129,15 @@ params:
     intro: "Hi, I am"
     title: "Saasha Joshi"
     subtitle: "A Quantum Computing Scientist"
-    content: "And an open-source Software Developer."
-    image: /images/hero.svg
+    content: "And an open source Software Developer."
+    image: /images/Saasha_Joshi_cropped_.jpeg
     bottomImage:
       enable: true
     # roundImage: true # Make hero image circular | default false
     button:
       enable: true
       name: "Resume"
-      url: "./static/files/Saasha_Joshi_Resume_April_2024.pdf"
+      url: "/static/Saasha_Joshi_Resume_April_2024.pdf"
       download: true
       newPage: true
     socialLinks:
@@ -162,17 +162,18 @@ params:
     title: "About Me"
     image: "/images/me.png"
     content: |-
-      I am a Quantum Computing researcher and Computer Science engineer. My focus centers on exploring quantum machine learning algorithms for image processing.
+      I am a Quantum Computing researcher and Computer Science engineer. My focus centers on exploring Quantum Machine Learning (QML) algorithms for image processing.
 
-      I am actively engaged in education and outreach activities. I believe in contributing meaningfully to the quantum community as an open-source software developer and a Qiskit Advocate. I am also an NSERC CREATE Quantum BC graduate.
+      I am actively engaged in education and outreach activities. I believe in contributing meaningfully to the quantum community as an open source software developer and a Qiskit Advocate. I am also an NSERC CREATE Quantum BC graduate.
     skills:
       enable: true
       title: "Here are a few topics that I am currently researching about:"
       items:
         - "Quantum Computing"
-        - "Quantum Machine Learning"
-        - "Image Processing"
+        - "QML"
+        - "AI/ML"
         - "MLOps"
+        - "Image Processing"
         # - "React"
         # - "Node"
         # - "Express"
@@ -185,14 +186,15 @@ params:
       - job: "Staff Scientist"
         company: "CMC Microsystems"
         companyUrl: "https://cmc.ca/"
-        date: "Jan 2024 - Present"
+        date: "June 2024 - Present"
         info:
           enable: false
         featuredLink:
           enable: false
           name: "View the project"
           url: "https://example.com"
-        content: "I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city."
+        content: |
+          Working as a research scientist involved in research, education and outreach activities in Quantum Computing.
 
       - job: "Graduate Research Assistant"
         company: "University of Victoria"
@@ -200,27 +202,27 @@ params:
         date: "September 2021 - June 2024"
         info:
           enable: false
-        featuredLink:
-          enable: false
-          url: "https://example.com"
+        # featuredLink:
+        #   name: "Master's Thesis"
+        #   enable: true
+        #   url: https://hdl.handle.net/1828/16627
         content: |
-          I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
-
-          - Lead backend developer for a product.
-          - Created a frontend design for a product.
+          Researched QML applications and built a software framework, piQture, for easy and user-friendly application of QML algorithms for image processing. 
+          
 
       - job: "Quantum Software Developer Intern - Research"
         company: "IBM Quantum"
         companyUrl: "https://www.ibm.com/quantum"
         date: "May 2023 - August 2023"
-        featuredLink:
-          enable: false
-          url: "https://example.com"
         info:
           enable: false
           # content: I worked as a software developer for more than one year in Amazon.
         content: |
             Built a wire-cutting feature, an error-mitigation pipeline, and managed documentation for the Circuit-Knitting team.
+        # featuredLink:
+        #   name: "GitHub: Wire Cutting"
+        #   enable: true
+        #   url: https://github.com/Qiskit-Extensions/circuit-knitting-toolbox/blob/main/circuit_knitting/cutting/wire_cutting_transforms.py
 
       - job: "Quantum Research Intern"
         info:
@@ -228,14 +230,16 @@ params:
         company: "IBM Quantum"
         companyUrl: "https://www.ibm.com/quantum"
         date: "May 2022 - August 2022"
-        featuredLink:
-          enable: false
-          url: "https://example.com"
         info:
           enable: false
           # content: I worked as a software developer for more than one year in Amazon.
         content: |
-            Built software features, benchmarking programs, and maintained open-source software for quantum chemistry applications with the Qiskit Nature team.
+            Built software features, benchmarking programs, and maintained open source software for quantum chemistry applications with the Qiskit Nature team.
+        # featuredLink:
+        #   name: "GitHub: Polynomial Tensor"
+        #   enable: true
+        #   url: https://github.com/qiskit-community/qiskit-nature/blob/main/qiskit_nature/second_q/operators/polynomial_tensor.py
+
 
       - job: "Quantum Computing Intern (Maker's Lab)"
         company: "Tech Mahindra"
@@ -336,6 +340,10 @@ params:
         # GPA: "3.8 out of 5.0"
         content: |-
             Advisors: Drs. Ulrike Stege and Hausi A. Muller
+        featuredLink:
+          name: "Master's Thesis"
+          enable: true
+          url: https://hdl.handle.net/1828/16627
   
       - title: "Bachelor of Engineering in Computer Science and Engineering"
         school:
@@ -372,11 +380,11 @@ params:
       - title: NSERC CREATE Quantum BC Scholar
         content: Received scholarship for conducting research in quantum computing in BC, Canada.
         url: https://api.ca.badgr.io/public/assertions/KLh0CJ8RRHCVQWmpTHMpgg?identity__email=saashajoshi08%40gmail.com
-        image: /images/nserc-grad.png
+        image: /images/Quantum-BC-Logo.png
       - title: Qiskit Advocate
         content: Active contributor at various academic, outreach, and volunteering programs, with help from IBM Quantum community.
         url: https://www.credly.com/badges/9dfa697c-f9b4-49b7-ae8e-6540e5346875/public_url
-        image: /images/qiskit-adv.png
+        image: /images/qiskit-adv-2.png
       # - title: Hugo Profile
       #   content: Developed a theme and getting 1K+ downloads per month.
       #   url: "https://github.com/gurusabarish/hugo-profile"
@@ -417,24 +425,31 @@ params:
     # title: "Custom Name"
     items:
       - title: piQture-A Quantum Machine Learning Library for Image Processing
-        content: An open-source Python and Qiskit-based software toolkit that simplifies the development, execution, and training of QML models tailored for image processing tasks.
+        content: An open source Python and Qiskit-based software toolkit that simplifies the development, execution, and training of QML models tailored for image processing tasks.
         image: /images/1.png
         featured:
-          name: Demos and Tutorials
-          link: https://github.com/SaashaJoshi/piQture-demos
-          # name: Thesis
-          # link: https://hdl.handle.net/1828/16627
+          name: Documentation
+          link: https://saashajoshi.github.io/piQture/
+
+        # featured:
+        #   name: Thesis
+        #   link: https://hdl.handle.net/1828/16627
         badges:
           - "Python"
           - "Qiskit"
           - "MLflow"
           - "Flask"
+          - "Sphinx"
           - "GitHub Actions"
         links:
           # - icon: fa fa-envelope
           #   url: mailto:?subject=Hugo%20Profile%20Template&body=Check%20it%20out:%20https%3a%2f%2fhugo-profile.netlify.app%2fblog%2fmarkdown-syntax%2f
           - icon: fab fa-github
             url: https://github.com/SaashaJoshi/piQture
+          - icon: fas fa-book-open
+            url: https://hdl.handle.net/1828/16627
+          - icon: fab fa-medium
+            url: https://medium.com/@saashajoshi/quick-start-guide-quantum-image-representation-with-piqture-900a6f1e1e31
           # customIcons:
           #   - icon: /fav.png
           #     url: "https://example.com"
@@ -445,9 +460,9 @@ params:
       - title: QML-CUT
         content: A circuit cutting workflow for quantum tensor network and QML models.
         image: /images/qiskit-neuralnetwork-uml.png
-        featured:
-          name: Demos and Tutorials
-          link: https://github.com/SaashaJoshi/piQture-demos
+        # featured:
+        #   name: Demos and Tutorials
+        #   link: https://github.com/SaashaJoshi/piQture-demos
         badges:
           - "Python"
           - "Qiskit"
@@ -459,9 +474,9 @@ params:
       - title: ER-FlowSim
         content: A comprehensive simulation of patient flow in an emergency room, incorporating a Canadian Triage and Acuity Scale (CTAS) for admission and discharge.
         image: /images/er-simflow.png
-        featured:
-          name: Results and Analysis
-          link: https://github.com/SaashaJoshi/ER-FlowSim/tree/main/analysis
+        # featured:
+        #   name: Results and Analysis
+        #   link: https://github.com/SaashaJoshi/ER-FlowSim/tree/main/analysis
         badges:
           - "PySim"
           # - "Bootstrap"
@@ -473,9 +488,9 @@ params:
       - title: Pancreatic Cancer Diagnosis - CADx System Development
         content: A deep neural network based diagnostic system for diagnosing Pancreatic Cancer.
         image: /images/Filtering-of-gaussian-noise-with-NF-of-01_W640-1.jpg
-        featured:
-          name: Paper
-          link: https://doi-org.ezproxy.library.uvic.ca/10.1002/ima.22668
+        # featured:
+        #   name: Paper
+        #   link: https://doi-org.ezproxy.library.uvic.ca/10.1002/ima.22668
         badges:
           - "Python"
           - "Tensorflow"
@@ -483,6 +498,8 @@ params:
         links:
           - icon: fab fa-github
             url: https://github.com/SaashaJoshi/Pancreas-Cancer-Diagnosis
+          - icon: fas fa-book-open
+            url: https://doi-org.ezproxy.library.uvic.ca/10.1002/ima.22668
 
       - title: Simulation and Control of a Quadcopter UAV
         content: A flight simulator for the control and evaluation of an Unmanned Aerial Vehicle (UAV).

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs on Hugo Profile</title>
+    <link>http://localhost:1313/blogs/</link>
+    <description>Recent content in Blogs on Hugo Profile</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 24 Jun 2024 23:29:21 -0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/blogs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Quick-Start Guide: Quantum Image Representation with piQture</title>
+      <link>http://localhost:1313/blogs/quick-start-guide-quantum-image-representation-with-piqture/</link>
+      <pubDate>Mon, 24 Jun 2024 23:29:21 -0800</pubDate>
+      <guid>http://localhost:1313/blogs/quick-start-guide-quantum-image-representation-with-piqture/</guid>
+      <description>Hello readers,&#xA;A couple of weeks ago I defended my Master&amp;rsquo;s thesis titled piQture: A Quantum Machine Learning (QML) Library for Image Processing1. Encouraged by the response and interest in piQture, I am here with a series of quick-start guides to the library.&#xA;Introducing piQture piQture is a Python and Qiskit-based software framework designed to accommodate users familiar with classical machine learning but without prior experience in QML. It provides users with an accessible workflow to design, implement, and experiment with QML models for real-life applications such as image processing.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/blogs/sample/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blogs/sample/</guid>
+      <description>Quantum Machine Learning with Circuit Cutting Quantum Machine Learning (QML) techniques, including variational Quantum Tensor Networks (QTN), pose a huge implementation challenge regarding qubit requirements. An approach to circumvent this issue is to perform circuit cutting that segments large quantum circuits into multiple smaller sub-circuits that can be trained easily on a quantum device 1. This project lays down the workflow for training a variational QTN circuit that implements circuit cutting, specifically gate cutting, to perform data classification.</description>
+    </item>
+  </channel>
+</rss>

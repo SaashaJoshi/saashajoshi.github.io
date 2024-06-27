@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Quantum Image Processing on Hugo Profile</title>
+    <link>http://localhost:1313/tags/quantum-image-processing/</link>
+    <description>Recent content in Quantum Image Processing on Hugo Profile</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 24 Jun 2024 23:29:21 -0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/quantum-image-processing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Quick-Start Guide: Quantum Image Representation with piQture</title>
+      <link>http://localhost:1313/blogs/quick-start-guide-quantum-image-representation-with-piqture/</link>
+      <pubDate>Mon, 24 Jun 2024 23:29:21 -0800</pubDate>
+      <guid>http://localhost:1313/blogs/quick-start-guide-quantum-image-representation-with-piqture/</guid>
+      <description>Hello readers,&#xA;A couple of weeks ago I defended my Master&amp;rsquo;s thesis titled piQture: A Quantum Machine Learning (QML) Library for Image Processing1. Encouraged by the response and interest in piQture, I am here with a series of quick-start guides to the library.&#xA;Introducing piQture piQture is a Python and Qiskit-based software framework designed to accommodate users familiar with classical machine learning but without prior experience in QML. It provides users with an accessible workflow to design, implement, and experiment with QML models for real-life applications such as image processing.</description>
+    </item>
+  </channel>
+</rss>
