@@ -1,5 +1,5 @@
 ---
-title: "Quick-Start Guide: Quantum Image Representation with piQture"
+title: "Quick-Start Guide-Quantum Image Representation with piQture"
 date: 2024-06-24T23:29:21-08:00
 draft: false
 github_link: 
