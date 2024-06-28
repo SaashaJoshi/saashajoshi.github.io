@@ -86,21 +86,22 @@ params:
 
   # color preference
   # When using hex codes for colors, quotations must be used along with the # sign
-  # color:
-  #   textColor: "#343a40"
-  #   secondaryTextColor: "#6c757d"
-  #   backgroundColor: "#eaedf0"
-  #   secondaryBackgroundColor: "#64ffda1a"
-  #   primaryColor: "#007bff"
-  #   secondaryColor: "#f8f9fa"
+  color:
+     textColor: "#343a40"
+     secondaryTextColor: "#6c757d"
+     backgroundColor: "#eaedf0"
+     secondaryBackgroundColor: "#64ffda1a"
+     primaryColor: "#007bff"
+     secondaryColor: "#f8f9fa"
 
-  #   darkmode:
-  #     textColor: "#e4e6eb"
-  #     secondaryTextColor: "#b0b3b8"
-  #     backgroundColor: "#18191a"
-  #     secondaryBackgroundColor: "#212529"
-  #     primaryColor: "#ffffff"
-  #     secondaryColor: "#212529"
+     darkmode:
+       textColor: "#e4e6eb"
+       secondaryTextColor: "#b0b3b8"
+       backgroundColor: "#18191a"
+       secondaryBackgroundColor: "#212529"
+       primaryColor: "#FE036A"
+#       "#ffffff"
+       secondaryColor: "#212529"
 
   # If you want to customize the menu, you can change it here
   navbar:
@@ -131,9 +132,10 @@ params:
     subtitle: "A Quantum Computing Scientist"
     content: "And an open source Software Developer."
     image: /images/Saasha_Joshi_cropped_.jpeg
+    roundImage: true
     bottomImage:
       enable: true
-    # roundImage: true # Make hero image circular | default false
+#      roundImage: true # Make hero image circular | default false
     button:
       enable: true
       name: "Resume"
